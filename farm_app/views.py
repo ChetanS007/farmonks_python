@@ -17,6 +17,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
+from .serializers import PondSerializer
+
 
 # Create your views here.
 
@@ -46,7 +48,6 @@ class VerifyEmail(APIView):
             },
             )
         )
-
     def post(self, request,token,*args, **kwargs):
         try:
             serializer = VerificationSerializer(data=request.data)
@@ -183,3 +184,12 @@ class UserLogoutView(APIView):
         logout(request)
 
         return Response( {"Message:Logout Successfull"} ,status=status.HTTP_200_OK)
+
+
+
+
+
+
+
+
+

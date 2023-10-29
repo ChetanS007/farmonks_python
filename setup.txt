@@ -1,0 +1,24 @@
+Step 1.create the database farmonks on local system with credentials
+
+DB_NAME=farmonks
+DB_USER_NAME=chetan
+DB_PWD=chetan@123#
+DB_HOST_NAME=127.0.0.1
+DB_PORT=5432
+
+
+Step 2. create virtual environment with command [python3 -m venv virtual_environment_name]
+
+Step 3. activate virtual environment by using below command
+
+        i.for ubunto [source virtual_environment_name/bin/activate]
+        
+        ii.for windows [virtual_environment_name\Scripts\activate]
+
+Step 4. install all dependent libraries [pip3 install -r requirements.txt]
+
+Step 5. [python3 manage.py makemigrations]
+
+Step 6. [python3 manage.py migrate]
+
+Step 7. [python3 manage.py runserver]
